@@ -1,0 +1,979 @@
+{
+  "name": "whois-xml-api",
+  "label": "Whois XML API",
+  "version": "1.0.0",
+  "description": "Whois XML API Provides comprehensive set of real-time and historic Whois, Domain name and DNS Data",
+  "publisher": "Fortinet",
+  "cs_approved": false,
+  "cs_compatible": false,
+  "category": "Threat Intelligence",
+  "icon_small_name": "sns_small.png",
+  "icon_large_name": "sns_large.png",
+  "help_online": "",
+  "configuration": {
+    "fields": [
+      {
+        "name": "api_key",
+        "title": "API Key",
+        "type": "password",
+        "editable": true,
+        "visible": true,
+        "required": true,
+        "description": "Specify the API key configured for your account using the WhoisXMLAPI."
+      },
+      {
+        "title": "Verify SSL",
+        "name": "verify_ssl",
+        "type": "checkbox",
+        "description": "Specifies whether the SSL certificate for the server is to be verified or not.",
+        "tooltip": "Specifies whether the SSL certificate for the server is to be verified or not.",
+        "required": false,
+        "editable": true,
+        "visible": true,
+        "value": true
+      }
+    ]
+  },
+  "operations": [
+    {
+      "operation": "whois_history_search",
+      "title": "Get WHOIS History Search",
+      "description": "WHOIS History Search is a tool will gives users access to complete historical WHOIS records, including domain ownership and registrar information over time",
+      "enabled": true,
+      "category": "investigation",
+      "annotation": "whois_history_search",
+      "output_schema": {
+        "recordsCount": "",
+        "records": [
+          {
+            "domainName": "",
+            "domainType": "",
+            "createdDateISO8601": "",
+            "updatedDateISO8601": "",
+            "expiresDateISO8601": "",
+            "createdDateRaw": "",
+            "updatedDateRaw": "",
+            "expiresDateRaw": "",
+            "audit": {
+              "createdDate": "",
+              "updatedDate": ""
+            },
+            "nameServers": [
+            ],
+            "whoisServer": "",
+            "registrarName": "",
+            "status": [
+            ],
+            "cleanText": "",
+            "rawText": "",
+            "registrantContact": {
+              "name": "",
+              "organization": "",
+              "street": "",
+              "city": "",
+              "state": "",
+              "postalCode": "",
+              "country": "",
+              "email": "",
+              "telephone": "",
+              "telephoneExt": "",
+              "fax": "",
+              "faxExt": "",
+              "rawText": ""
+            },
+            "administrativeContact": {
+              "name": "",
+              "organization": "",
+              "street": "",
+              "city": "",
+              "state": "",
+              "postalCode": "",
+              "country": "",
+              "email": "",
+              "telephone": "",
+              "telephoneExt": "",
+              "fax": "",
+              "faxExt": "",
+              "rawText": ""
+            },
+            "technicalContact": {
+              "name": "",
+              "organization": "",
+              "street": "",
+              "city": "",
+              "state": "",
+              "postalCode": "",
+              "country": "",
+              "email": "",
+              "telephone": "",
+              "telephoneExt": "",
+              "fax": "",
+              "faxExt": "",
+              "rawText": ""
+            },
+            "billingContact": {
+              "name": "",
+              "organization": "",
+              "street": "",
+              "city": "",
+              "state": "",
+              "postalCode": "",
+              "country": "",
+              "email": "",
+              "telephone": "",
+              "telephoneExt": "",
+              "fax": "",
+              "faxExt": "",
+              "rawText": ""
+            },
+            "zoneContact": {
+              "name": "",
+              "organization": "",
+              "street": "",
+              "city": "",
+              "state": "",
+              "postalCode": "",
+              "country": "",
+              "email": "",
+              "telephone": "",
+              "telephoneExt": "",
+              "fax": "",
+              "faxExt": "",
+              "rawText": ""
+            }
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "title": "Domain Name",
+          "name": "domainName",
+          "type": "text",
+          "description": "The domain for which historic WHOIS data is requested",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Since Date",
+          "name": "sinceDate",
+          "type": "date",
+          "description": "If present, search through activities discovered since the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "placeholder": "YYYY-MM-DD"
+        },
+        {
+          "title": "Created Date From",
+          "name": "createdDateFrom",
+          "type": "date",
+          "description": "If present, search through domains created after the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "placeholder": "YYYY-MM-DD"
+        },
+        {
+          "title": "Created Date To",
+          "name": "createdDateTo",
+          "type": "date",
+          "description": "If present, search through domains created before the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "placeholder": "YYYY-MM-DD"
+        },
+        {
+          "title": "Updated Date From",
+          "name": "updatedDateFrom",
+          "type": "date",
+          "description": "If present, search through domains updated after the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "placeholder": "YYYY-MM-DD"
+        },
+        {
+          "title": "Updated Date To",
+          "name": "updatedDateTo",
+          "type": "date",
+          "description": "If present, search through domains updated before the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "placeholder": "YYYY-MM-DD"
+        },
+        {
+          "title": "Expired Date From",
+          "name": "expiredDateFrom",
+          "type": "date",
+          "description": "If present, search through domains expired after the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "placeholder": "YYYY-MM-DD"
+        },
+        {
+          "title": "Expired Date To",
+          "name": "expiredDateTo",
+          "type": "date",
+          "description": "If present, search through domains expired before the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "placeholder": "YYYY-MM-DD"
+        }
+      ]
+    },
+    {
+      "operation": "whois_search",
+      "title": "Get WHOIS Search",
+      "description": "It provides the registration details, also known as the WHOIS record data, of a domain name, an IP address, or an email address",
+      "enabled": true,
+      "category": "investigation",
+      "annotation": "whois_search",
+      "output_schema": {
+        "WhoisRecord": {
+          "createdDate": "",
+          "updatedDate": "",
+          "expiresDate": "",
+          "registrant": {
+            "organization": "",
+            "state": "",
+            "country": "",
+            "countryCode": "",
+            "rawText": ""
+          },
+          "administrativeContact": {
+            "organization": "",
+            "state": "",
+            "country": "",
+            "countryCode": "",
+            "rawText": ""
+          },
+          "technicalContact": {
+            "organization": "",
+            "state": "",
+            "country": "",
+            "countryCode": "",
+            "rawText": ""
+          },
+          "domainName": "",
+          "nameServers": {
+            "rawText": "",
+            "hostNames": [
+            ],
+            "ips": []
+          },
+          "status": "",
+          "rawText": "",
+          "parseCode": "",
+          "header": "",
+          "strippedText": "",
+          "footer": "",
+          "audit": {
+            "createdDate": "",
+            "updatedDate": ""
+          },
+          "registrarName": "",
+          "registrarIANAID": "",
+          "createdDateNormalized": "",
+          "updatedDateNormalized": "",
+          "expiresDateNormalized": "",
+          "registryData": {
+            "createdDate": "",
+            "updatedDate": "",
+            "expiresDate": "",
+            "domainName": "",
+            "nameServers": {
+              "rawText": "",
+              "hostNames": [
+              ],
+              "ips": []
+            },
+            "status": "",
+            "rawText": "",
+            "parseCode": "",
+            "header": "",
+            "strippedText": "",
+            "footer": "",
+            "audit": {
+              "createdDate": "",
+              "updatedDate": ""
+            },
+            "registrarName": "",
+            "registrarIANAID": "",
+            "createdDateNormalized": "",
+            "updatedDateNormalized": "",
+            "expiresDateNormalized": "",
+            "whoisServer": ""
+          },
+          "contactEmail": "",
+          "domainNameExt": "",
+          "estimatedDomainAge": ""
+        }
+      },
+      "parameters": [
+        {
+          "title": "Domain/IPv4/IPv6/Email Address ",
+          "name": "domainName",
+          "type": "text",
+          "description": "The domain/IPv4/IPv6/email address for which WHOIS data is requested",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Prefer Fresh",
+          "name": "preferFresh",
+          "type": "checkbox",
+          "description": "If True results in getting the latest WHOIS record even if it's incomplete",
+          "tooltip": "If True results in getting the latest WHOIS record even if it's incomplete",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": false
+        },
+        {
+          "title": "Domain Availability",
+          "name": "da",
+          "type": "select",
+          "options": [
+            "0 - Available",
+            "1 - Unavailable",
+            "2- Undetermined"
+          ],
+          "description": "1 results in a quick check on domain availability, 2 is slower but more accurate. Results are returned under WhoisRecord domainAvailability (AVAILABLE | UNAVAILABLE | UNDETERMINED)",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": "0 - Available"
+        },
+        {
+          "title": "IP Address",
+          "name": "ip",
+          "type": "checkbox",
+          "description": "If True results in returning IPs for the domain name",
+          "tooltip": "If True results in returning IPs for the domain name",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": false
+        },
+        {
+          "title": "IP Address Whois",
+          "name": "ipWhois",
+          "type": "checkbox",
+          "description": "If True results in returning the WHOIS record for the hosting IP if the WHOIS record for the tld of the input domain is not supported",
+          "tooltip": "If True results in returning the WHOIS record for the hosting IP if the WHOIS record for the tld of the input domain is not supported",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": false
+        },
+        {
+          "title": "Proxy Data",
+          "name": "checkProxyData",
+          "type": "checkbox",
+          "description": "If True results in fetching proxy/WHOIS guard data, if it exists, in the WhoisRecord privateWhoisProxy schema element",
+          "tooltip": "If True results in fetching proxy/WHOIS guard data, if it exists, in the WhoisRecord privateWhoisProxy schema element",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": false
+        },
+        {
+          "title": "Other Fields",
+          "tooltip": "Specify fields in the JSON format to be used as Search criteria (used to determine dynamic membership) fields or as link fields",
+          "description": "Specify fields in the JSON format to be used as Search criteria (used to determine dynamic membership) fields or as link fields",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "type": "json",
+          "name": "other_fields"
+        }
+      ]
+    },
+    {
+      "operation": "reverse_whois_search",
+      "title": "Get Reverse WHOIS Search",
+      "description": "Reverse WHOIS is the process by which users can find all domains containing specified search terms such as a registrant's name, email address, or phone number in their WHOIS records",
+      "enabled": true,
+      "category": "investigation",
+      "annotation": "reverse_whois_search",
+      "output_schema": {
+        "nextPageSearchAfter": "",
+        "domainsCount": "",
+        "domainsList": [
+        ]
+      },
+      "parameters": [
+        {
+          "title": "Include Domain Search Terms",
+          "name": "include_domain_search_terms",
+          "type": "text",
+          "description": "Comma seprated search terms. All of them should be present in the domain name. Maximum 4 items. Case insensitive",
+          "placeholder": "amazon, blog",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Exclude Domain Search Terms",
+          "name": "exclude_domain_search_terms",
+          "type": "text",
+          "description": "Comma seprated search terms. All of them should NOT be present in the domain name. Maximum 4 items. Case insensitive",
+          "placeholder": "amazon.*, amazon.com",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Include Audit Dates",
+          "name": "include_audit_dates",
+          "type": "checkbox",
+          "description": "If true, each domain name in the output will be supplemented with the corresponding audit dates",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": false
+        },
+        {
+          "title": "Search Type",
+          "name": "search_type",
+          "type": "select",
+          "options": [
+            "Current",
+            "Historic"
+          ],
+          "description": "current – search in the current WHOIS records only. historic – search in both actual and historical WHOIS records",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": "Current"
+        },
+        {
+          "title": "Mode",
+          "name": "mode",
+          "type": "select",
+          "options": [
+            "Preview",
+            "Purchase"
+          ],
+          "description": "preview – return only the number of domains. No credits deducted.purchase – return the actual list of domains (limited to 10,000). 1 request costs 10 DRS credits",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": "Preview"
+        },
+        {
+          "title": "Created Date From",
+          "name": "createdDateFrom",
+          "type": "date",
+          "description": "If present, search through domains created after the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "placeholder": "YYYY-MM-DD"
+        },
+        {
+          "title": "Created Date To",
+          "name": "createdDateTo",
+          "type": "date",
+          "description": "If present, search through domains created before the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "placeholder": "YYYY-MM-DD"
+        },
+        {
+          "title": "Updated Date From",
+          "name": "updatedDateFrom",
+          "type": "date",
+          "description": "If present, search through domains updated after the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "placeholder": "YYYY-MM-DD"
+        },
+        {
+          "title": "Updated Date To",
+          "name": "updatedDateTo",
+          "type": "date",
+          "description": "If present, search through domains updated before the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "placeholder": "YYYY-MM-DD"
+        },
+        {
+          "title": "Expired Date From",
+          "name": "expiredDateFrom",
+          "type": "date",
+          "description": "If present, search through domains expired after the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "placeholder": "YYYY-MM-DD"
+        },
+        {
+          "title": "Expired Date To",
+          "name": "expiredDateTo",
+          "type": "date",
+          "description": "If present, search through domains expired before the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "placeholder": "YYYY-MM-DD"
+        },
+        {
+          "title": "Search After",
+          "name": "search_after",
+          "type": "text",
+          "description": "Every response is limited to 10,000 records, you can retrieve the next page by using this parameter. The value should be taken from the nextPageSearchAfter output field. All the domain names in the result are sorted by the dates they appeared in our databases in descending order. Acceptable values: Unix timestamp",
+          "required": false,
+          "editable": true,
+          "visible": true
+        }
+      ]
+    },
+    {
+      "operation": "dns_lookup",
+      "title": "Get DNS Lookup",
+      "category": "investigation",
+      "annotation": "dns_lookup",
+      "enabled": true,
+      "description": "Retrieves DNS Lookup for a specified domain name from WhoisXMLAPI. A DNS lookup provides a domain’s corresponding IP address from its 'A' record as well as the domain’s mail server (MX record), nameserver (NS record), SPF (TXT record), and more records. ",
+      "output_schema": {
+        "DNSData": {
+          "domainName": "",
+          "types": "",
+          "dnsTypes": "",
+          "audit": {
+            "createdDate": "",
+            "updatedDate": ""
+          },
+          "dnsRecords": [
+            {
+              "type": "",
+              "dnsType": "",
+              "name": "",
+              "ttl": "",
+              "rRsetType": "",
+              "rawText": "",
+              "strings": ""
+            }
+          ]
+        }
+      },
+      "parameters": [
+        {
+          "title": "Domain Name",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "type": "text",
+          "name": "domainName",
+          "tooltip": "Name of the domain whose DNS Lookup information you want to retrieve from WhoisXMLAPI.",
+          "description": "Name of the domain whose DNS Lookup information you want to retrieve from WhoisXMLAPI."
+        },
+        {
+          "title": "DNS Type",
+          "required": true,
+          "editable": true,
+          "visible": true,
+          "type": "multiselect",
+          "name": "type",
+          "tooltip": "Select Multiple Types to retrieve records ",
+          "description": "Select the lookup type based on which you want to retrieve records from WhoisXmlAPI.",
+          "value": "_all",
+          "options": [
+            "_all",
+            "A",
+            "NS",
+            "MD",
+            "MF",
+            "CNAME",
+            "SOA",
+            "MB",
+            "MG",
+            "MR",
+            "NULL",
+            "WKS",
+            "PTR",
+            "HINFO",
+            "MINFO",
+            "MX",
+            "TXT",
+            "RP",
+            "AFSDB",
+            "X25",
+            "ISDN",
+            "RT",
+            "NSAP",
+            "NSAP_PTR",
+            "SIG",
+            "KEY",
+            "PX",
+            "GPOS",
+            "AAAA",
+            "LOC",
+            "NXT",
+            "EID",
+            "NIMLOC",
+            "SRV",
+            "ATMA",
+            "NAPTR",
+            "KX",
+            "CERT",
+            "A6",
+            "DNAME",
+            "APL",
+            "DS",
+            "SSHFP",
+            "IPSECKEY",
+            "RRSIG",
+            "NSEC",
+            "DNSKEY",
+            "DHCID",
+            "NSEC3",
+            "NSEC3PARAM",
+            "TLSA",
+            "ANY",
+            "DLV"
+          ]
+        }
+      ]
+    },
+    {
+      "operation": "reverse_dns_search",
+      "title": "Get Reverse DNS Search",
+      "description": "It lists all domains that have resolved to a given IP address, mail server, or nameserver at one point in time on the Domain Name System (DNS)",
+      "enabled": true,
+      "category": "investigation",
+      "annotation": "reverse_dns_search",
+      "output_schema": {
+        "current_page": "",
+        "size": "",
+        "result": [
+          {
+            "name": "",
+            "first_seen": "",
+            "last_visit": ""
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "title": "DNS Type",
+          "name": "reverse_dns_type",
+          "visible": true,
+          "required": true,
+          "editable": true,
+          "type": "select",
+          "options": [
+            "IPv4 Address",
+            "Mail Server",
+            "Name Server"
+          ],
+          "onchange": {
+            "IPv4 address": [
+              {
+                "title": "IPv4 Address",
+                "name": "ip",
+                "visible": true,
+                "required": true,
+                "editable": true,
+                "type": "text",
+                "placeholder": "8.8.8.8",
+                "tooltip": "Retrieve lists all domains that have resolved to a given IP address at one point in time on the Domain Name System (DNS)",
+                "description": "Retrieve lists all domains that have resolved to a given IP address at one point in time on the Domain Name System (DNS)"
+              }
+            ],
+            "Mail server": [
+              {
+                "title": "Mail server",
+                "name": "mx",
+                "visible": true,
+                "required": true,
+                "editable": true,
+                "type": "text",
+                "placeholder": "mx.google.com",
+                "tooltip": "Retrieve lists all domains that have resolved to a given mail server at one point in time on the Domain Name System (DNS)",
+                "description": "Retrieve lists all domains that have resolved to a given mail server at one point in time on the Domain Name System (DNS)"
+              }
+            ],
+            "Name server": [
+              {
+                "title": "Name server",
+                "name": "ns",
+                "visible": true,
+                "required": true,
+                "editable": true,
+                "type": "text",
+                "placeholder": "ns2.google.com",
+                "tooltip": "Retrieve lists all domains that have resolved to a given name server at one point in time on the Domain Name System (DNS)",
+                "description": "Retrieve lists all domains that have resolved to a given name server at one point in time on the Domain Name System (DNS)"
+              }
+            ]
+          },
+          "tooltip": "Select the method from the following options using which you want to retrieve the reverse dns of IPv4 Address, Mail Server or Name Server",
+          "description": "Select the method from the following options using which you want to retrieve reverse dns"
+        },
+        {
+          "title": "From",
+          "name": "from",
+          "type": "text",
+          "description": "The domain name which is used as an offset for the results returned, every response is limited to 300 records, you can retrieve the next page by putting the last domain name from the response into this parameter. If the parameter is omitted, you get arbitrary 300 records. To get the first page, put 1 into the parameter",
+          "tooltip": "The domain name which is used as an offset for the results returned, every response is limited to 300 records, you can retrieve the next page by putting the last domain name from the response into this parameter. If the parameter is omitted, you get arbitrary 300 records. To get the first page, put 1 into the parameter",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": false
+        }
+      ]
+    },
+    {
+      "operation": "domain_subdoamin_discovery",
+      "title": "Domain/Subdoamin Discovery",
+      "description": "Domains & Subdomains Discovery Service allows you to identify all domains and/or subdomains connected by hostname terms",
+      "enabled": true,
+      "category": "investigation",
+      "annotation": "domain_subdoamin_discovery",
+      "output_schema": {
+        "domainsCount": "",
+        "domainsList": [
+        ]
+      },
+      "parameters": [
+        {
+          "title": "Include Domain",
+          "name": "include_domain",
+          "type": "text",
+          "description": "Specify the comma seprated domain list whose domain and subdomain you want to find",
+          "placeholder": "amazon.*, amazon.com",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Exclude Domains",
+          "name": "exclude_domains",
+          "type": "text",
+          "description": "Specify the comma seprated exclude domain list whose domain and subdomain you want to find",
+          "placeholder": "amazon.*, amazon.com",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Include Subdomain",
+          "name": "include_subdomain",
+          "type": "text",
+          "description": "Specify the comma seprated subdomain list whose domain and subdomain you want to find",
+          "placeholder": "*portal*,*beta*",
+          "required": false,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Exclude Subdomains",
+          "name": "exclude_subdomains",
+          "type": "text",
+          "description": "Specify the comma seprated exclude subdomain list whose domain and subdomain you want to find",
+          "placeholder": "*portal*,*beta*",
+          "required": false,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Since Date",
+          "name": "sinceDate",
+          "type": "date",
+          "description": "If present, search through domains/subdomains discovered since the given date",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "placeholder": "YYYY-MM-DD"
+        }
+      ]
+    },
+    {
+      "operation": "brand_monitor",
+      "title": "Brand Monitor",
+      "description": "Automatic to track all new and just expired domain name registrations. You can monitor exact matches or typo variants to protect your brand reputation, detect trademark infringements, monitor competitors, and more",
+      "enabled": true,
+      "category": "investigation",
+      "annotation": "brand_monitor",
+      "output_schema": {
+        "domainsCount": "",
+        "domainsList": [
+          {
+            "domainName": "",
+            "action": "",
+            "date": ""
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "title": "Include Domain Search Terms",
+          "name": "include_domain_search_terms",
+          "type": "text",
+          "description": "Comma seprated search terms. All of them should be present in the domain name. Maximum 4 items. Case insensitive",
+          "placeholder": "amazon,blog",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Exclude Domain Search Terms",
+          "name": "exclude_domain_search_terms",
+          "type": "text",
+          "description": "Comma seprated search terms. All of them should NOT be present in the domain name. Maximum 4 items. Case insensitive",
+          "placeholder": "amazon.*,amazon.com",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "Since Date",
+          "name": "sinceDate",
+          "type": "date",
+          "description": "Allowed dates are in the [Today minus 14 days — Today] interva. Yesterday's date by default. If present, search through activities discovered since the given date. Sometimes there is a latency between the actual added/renewal/expired date and the date when our system detected this change. We recommend using this field in your monitoring tools for filtering daily changes",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "placeholder": "YYYY-MM-DD"
+        },
+        {
+          "title": "Mode",
+          "name": "mode",
+          "type": "select",
+          "options": [
+            "Preview",
+            "Purchase"
+          ],
+          "description": "preview – return only the number of domains. No credits deducted.purchase – return the actual list of domains (limited to 10,000). 1 request costs 10 DRS credits",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": "Preview"
+        },
+        {
+          "title": "With Typos",
+          "name": "withTypos",
+          "type": "checkbox",
+          "description": "If true, the search terms set will be enriched with their possible typos. For example, for the term 'google', the typos might be: 'goigle', 'gokgle', 'golgle', 'gopgle', 'goglee', 'gooogle' etc",
+          "tooltip": "If true, the search terms set will be enriched with their possible typos. For example, for the term 'google', the typos might be: 'goigle', 'gokgle', 'golgle', 'gopgle', 'goglee', 'gooogle' etc",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": false
+        }
+      ]
+    },
+    {
+      "operation": "ssl_certificates",
+      "title": "Get SSL Certificates",
+      "description": "Obtain a domain name’s Secure Sockets Layer (SSL) certificate and trace its complete SSL certificate chain to reveal potential inconsistencies and misconfigurations that may translate to exploitable vulnerabilities. A single SSL Certificate Chain API query provides details that can ease your security enrichment efforts, allowing you to know which domains are trustworthy and which are not",
+      "enabled": true,
+      "category": "investigation",
+      "annotation": "ssl_certificates",
+      "output_schema": {
+        "auditCreated": "",
+        "domain": "",
+        "ip": "",
+        "port": "",
+        "certificates": [
+          {
+            "chainHierarchy": "",
+            "validationType": "",
+            "validFrom": "",
+            "validTo": "",
+            "serialNumber": "",
+            "signatureAlgorithm": "",
+            "subject": {
+              "commonName": ""
+            },
+            "issuer": {
+              "country": "",
+              "organization": "",
+              "commonName": ""
+            },
+            "pem": "",
+            "extensions": {
+              "authorityKeyIdentifier": "",
+              "subjectKeyIdentifier": "",
+              "keyUsage": [
+              ],
+              "extendedKeyUsage": [
+              ],
+              "crlDistributionPoints": [
+              ],
+              "authorityInfoAccess": {
+                "issuers": [
+                ],
+                "ocsp": [
+                ]
+              },
+              "subjectAlternativeNames": {
+                "dnsNames": [
+                ]
+              },
+              "certificatePolicies": [
+                {
+                  "policyIdentifier": "",
+                  "policyQualifiers": ""
+                },
+                {
+                  "policyIdentifier": "",
+                  "policyQualifiers": ""
+                }
+              ]
+            },
+            "publicKey": {
+              "type": "",
+              "bits": "",
+              "pem": ""
+            }
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "title": "Domain Name",
+          "name": "domainName",
+          "type": "text",
+          "description": "The domain for which ssl certificate is requested",
+          "required": true,
+          "editable": true,
+          "visible": true
+        },
+        {
+          "title": "With Chain",
+          "name": "withChain",
+          "type": "checkbox",
+          "description": "If true, allows you to get all domain certificates sorted from the end-user to the root one",
+          "tooltip": "If true, allows you to get all domain certificates sorted from the end-user to the root one",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": false
+        },
+        {
+          "title": "Hard Refresh",
+          "name": "hardRefresh",
+          "type": "checkbox",
+          "description": "If true, results in getting fresh data",
+          "tooltip": "If true, results in getting fresh data",
+          "required": false,
+          "editable": true,
+          "visible": true,
+          "value": false
+        }
+      ]
+    }
+  ]
+}
