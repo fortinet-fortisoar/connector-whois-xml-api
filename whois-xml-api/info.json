@@ -1,12 +1,12 @@
 {
   "name": "whois-xml-api",
-  "label": "whoisXMLAPI",
+  "label": "Whois XML API",
   "version": "1.0.0",
   "description": "Whois XML API Provides comprehensive set of real-time and historic Whois, Domain name and DNS Data",
   "publisher": "Fortinet",
   "cs_approved": false,
   "cs_compatible": false,
-  "category": "Information",
+  "category": "Threat Intelligence",
   "icon_small_name": "sns_small.png",
   "icon_large_name": "sns_large.png",
   "help_online": "",
@@ -157,7 +157,7 @@
         {
           "title": "Since Date",
           "name": "sinceDate",
-          "type": "datetime",
+          "type": "date",
           "description": "If present, search through activities discovered since the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
           "required": false,
           "editable": true,
@@ -167,7 +167,7 @@
         {
           "title": "Created Date From",
           "name": "createdDateFrom",
-          "type": "datetime",
+          "type": "date",
           "description": "If present, search through domains created after the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
           "required": false,
           "editable": true,
@@ -177,7 +177,7 @@
         {
           "title": "Created Date To",
           "name": "createdDateTo",
-          "type": "datetime",
+          "type": "date",
           "description": "If present, search through domains created before the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
           "required": false,
           "editable": true,
@@ -187,7 +187,7 @@
         {
           "title": "Updated Date From",
           "name": "updatedDateFrom",
-          "type": "datetime",
+          "type": "date",
           "description": "If present, search through domains updated after the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
           "required": false,
           "editable": true,
@@ -197,7 +197,7 @@
         {
           "title": "Updated Date To",
           "name": "updatedDateTo",
-          "type": "datetime",
+          "type": "date",
           "description": "If present, search through domains updated before the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
           "required": false,
           "editable": true,
@@ -207,7 +207,7 @@
         {
           "title": "Expired Date From",
           "name": "expiredDateFrom",
-          "type": "datetime",
+          "type": "date",
           "description": "If present, search through domains expired after the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
           "required": false,
           "editable": true,
@@ -217,7 +217,7 @@
         {
           "title": "Expired Date To",
           "name": "expiredDateTo",
-          "type": "datetime",
+          "type": "date",
           "description": "If present, search through domains expired before the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
           "required": false,
           "editable": true,
@@ -470,7 +470,7 @@
         {
           "title": "Created Date From",
           "name": "createdDateFrom",
-          "type": "datetime",
+          "type": "date",
           "description": "If present, search through domains created after the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
           "required": false,
           "editable": true,
@@ -480,7 +480,7 @@
         {
           "title": "Created Date To",
           "name": "createdDateTo",
-          "type": "datetime",
+          "type": "date",
           "description": "If present, search through domains created before the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
           "required": false,
           "editable": true,
@@ -490,7 +490,7 @@
         {
           "title": "Updated Date From",
           "name": "updatedDateFrom",
-          "type": "datetime",
+          "type": "date",
           "description": "If present, search through domains updated after the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
           "required": false,
           "editable": true,
@@ -500,7 +500,7 @@
         {
           "title": "Updated Date To",
           "name": "updatedDateTo",
-          "type": "datetime",
+          "type": "date",
           "description": "If present, search through domains updated before the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
           "required": false,
           "editable": true,
@@ -510,7 +510,7 @@
         {
           "title": "Expired Date From",
           "name": "expiredDateFrom",
-          "type": "datetime",
+          "type": "date",
           "description": "If present, search through domains expired after the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
           "required": false,
           "editable": true,
@@ -520,7 +520,7 @@
         {
           "title": "Expired Date To",
           "name": "expiredDateTo",
-          "type": "datetime",
+          "type": "date",
           "description": "If present, search through domains expired before the given date. Acceptable values: date in \"YYYY-MM-DD\" format",
           "required": false,
           "editable": true,
@@ -531,7 +531,7 @@
           "title": "Search After",
           "name": "search_after",
           "type": "text",
-          "description": "every response is limited to 10,000 records, you can retrieve the next page by using this parameter. The value should be taken from the nextPageSearchAfter output field. All the domain names in the result are sorted by the dates they appeared in our databases in descending order. Acceptable values: Unix timestamp",
+          "description": "Every response is limited to 10,000 records, you can retrieve the next page by using this parameter. The value should be taken from the nextPageSearchAfter output field. All the domain names in the result are sorted by the dates they appeared in our databases in descending order. Acceptable values: Unix timestamp",
           "required": false,
           "editable": true,
           "visible": true
@@ -687,8 +687,8 @@
                 "editable": true,
                 "type": "text",
                 "placeholder": "8.8.8.8",
-                "tooltip": "Retrive lists all domains that have resolved to a given IP address at one point in time on the Domain Name System (DNS)",
-                "description": "Retrive lists all domains that have resolved to a given IP address at one point in time on the Domain Name System (DNS)"
+                "tooltip": "Retrieve lists all domains that have resolved to a given IP address at one point in time on the Domain Name System (DNS)",
+                "description": "Retrieve lists all domains that have resolved to a given IP address at one point in time on the Domain Name System (DNS)"
               }
             ],
             "Mail server": [
@@ -700,8 +700,8 @@
                 "editable": true,
                 "type": "text",
                 "placeholder": "mx.google.com",
-                "tooltip": "Retrive lists all domains that have resolved to a given mail server at one point in time on the Domain Name System (DNS)",
-                "description": "Retrive lists all domains that have resolved to a given mail server at one point in time on the Domain Name System (DNS)"
+                "tooltip": "Retrieve lists all domains that have resolved to a given mail server at one point in time on the Domain Name System (DNS)",
+                "description": "Retrieve lists all domains that have resolved to a given mail server at one point in time on the Domain Name System (DNS)"
               }
             ],
             "Name server": [
@@ -713,13 +713,13 @@
                 "editable": true,
                 "type": "text",
                 "placeholder": "ns2.google.com",
-                "tooltip": "Retrive lists all domains that have resolved to a given name server at one point in time on the Domain Name System (DNS)",
-                "description": "Retrive lists all domains that have resolved to a given name server at one point in time on the Domain Name System (DNS)"
+                "tooltip": "Retrieve lists all domains that have resolved to a given name server at one point in time on the Domain Name System (DNS)",
+                "description": "Retrieve lists all domains that have resolved to a given name server at one point in time on the Domain Name System (DNS)"
               }
             ]
           },
-          "tooltip": "Select the method from the following options using which you want to retrive reverse dns",
-          "description": "Select the method from the following options using which you want to retrive reverse dns"
+          "tooltip": "Select the method from the following options using which you want to retrieve the reverse dns of IPv4 Address, Mail Server or Name Server",
+          "description": "Select the method from the following options using which you want to retrieve reverse dns"
         },
         {
           "title": "From",
@@ -790,7 +790,7 @@
         {
           "title": "Since Date",
           "name": "sinceDate",
-          "type": "datetime",
+          "type": "date",
           "description": "If present, search through domains/subdomains discovered since the given date",
           "required": false,
           "editable": true,
@@ -840,7 +840,7 @@
         {
           "title": "Since Date",
           "name": "sinceDate",
-          "type": "datetime",
+          "type": "date",
           "description": "Allowed dates are in the [Today minus 14 days — Today] interva. Yesterday's date by default. If present, search through activities discovered since the given date. Sometimes there is a latency between the actual added/renewal/expired date and the date when our system detected this change. We recommend using this field in your monitoring tools for filtering daily changes",
           "required": false,
           "editable": true,
