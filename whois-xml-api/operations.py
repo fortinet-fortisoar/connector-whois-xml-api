@@ -48,7 +48,14 @@ class WhoisXMLAPI(object):
 
 
 def get_params(params):
-    params = {k: v for k, v in params.items() if v is not None and v != ''}
+    for k, v in list(params.items()):
+        if v is not None and v != '':
+            if k in ['sinceDate', 'createdDateFrom', 'createdDateTo', 'updatedDateFrom', 'updatedDateTo',
+                     'expiredDateFrom', 'expiredDateTo']:
+                v = v.split('T')[0]
+            params.update({k: v})
+        else:
+            params.pop(k, '')
     return params
 
 
@@ -196,7 +203,7 @@ def brand_monitor(config, params):
             "includeSearchTerms": include_domain_search_terms,
             "excludeSearchTerms": exclude_domain_search_terms
         }
-        return wxa.make_api_call(endpoint=WHOISXML_BRAND_MONITOR, method='POST', data=payload)
+        return wxa.make_api_call(endpoint=WHOISXML_BRAND_MONITOR_ENDPOINT, method='POST', data=payload)
     except Exception as err:
         logger.exception(str(err))
         raise ConnectorError(str(err))
@@ -205,10 +212,8 @@ def brand_monitor(config, params):
 def ssl_certificates(config, params):
     try:
         wxa = WhoisXMLAPI(config)
-        if params.get('withChain'):
-            params['withChain'] = True_False_Map.get(str(params.get('withChain')))
-        if params.get('hardRefresh'):
-            params['hardRefresh'] = True_False_Map.get(str(params.get('hardRefresh')))
+        params['withChain'] = True_False_Map.get(str(params.get('withChain')))
+        params['hardRefresh'] = True_False_Map.get(str(params.get('hardRefresh')))
         params.update({'apiKey': config.get('api_key'), 'outputFormat': 'JSON'})
         params = get_params(params)
         return wxa.make_api_call(endpoint=WHOISXML_SSL_CERTIFICATES_ENDPOINT, params=params)
