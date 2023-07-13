@@ -2,10 +2,10 @@
   "type": "workflow_collections",
   "data": [
     {
-      "uuid": "0f21101d-526c-4d03-b6bf-24d9a9dbb4b6",
+      "uuid": "76ee7c0e-d67f-450d-9701-958fb6a2c9ab",
       "@type": "WorkflowCollection",
-      "name": "Sample - Whois XML API - 1.0.0",
-      "description": "Whois XML API Provides comprehensive set of real-time and historic Whois, Domain name and DNS Data",
+      "name": "Sample - WhoisXMLAPI - 1.0.0",
+      "description": "WhoisXMLAPI Provides comprehensive set of real-time and historic Whois, Domain name and DNS Data",
       "visible": true,
       "image": null,
       "recordTags": [
@@ -15,12 +15,12 @@
       "workflows": [
         {
           "@type": "Workflow",
-          "uuid": "7c107c7d-75e4-4e09-a562-79c0e3fad247",
-          "collection": "/api/3/workflow_collections/0f21101d-526c-4d03-b6bf-24d9a9dbb4b6",
+          "uuid": "484e1267-0f39-4508-9f5d-947be20aeff7",
+          "collection": "/api/3/workflow_collections/76ee7c0e-d67f-450d-9701-958fb6a2c9ab",
           "triggerLimit": null,
           "description": "WHOIS History Search is a tool will gives users access to complete historical WHOIS records, including domain ownership and registrar information over time",
           "name": "Get WHOIS History Search",
-          "tag": "#Whois XML API",
+          "tag": "#WhoisXMLAPI",
           "recordTags": [
             "Whois",
             "whois-xml-api"
@@ -30,17 +30,17 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/c6a8ddf1-50f7-4e6c-bdb2-55569fd70010",
+          "triggerStep": "/api/3/workflow_steps/322cd5e6-cbcc-4d99-86bb-6f4c8931398b",
           "steps": [
             {
-              "uuid": "c6a8ddf1-50f7-4e6c-bdb2-55569fd70010",
+              "uuid": "322cd5e6-cbcc-4d99-86bb-6f4c8931398b",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "c1e3c81e-8924-4f73-b6ec-9785eb68c9ba",
-                "title": "Whois XML API: Get WHOIS History Search",
+                "route": "bbee5617-f90f-4e90-8a18-6c2fcf6ee559",
+                "title": "WhoisXMLAPI: Get WHOIS History Search",
                 "resources": [
                   "alerts"
                 ],
@@ -59,13 +59,13 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "9fa6e400-b7aa-469d-aa7a-c2f1bb2fc954",
+              "uuid": "d72cfe1d-f5ef-41f3-98b2-b831365c4294",
               "@type": "WorkflowStep",
               "name": "Get WHOIS History Search",
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Whois XML API",
+                "name": "WhoisXMLAPI",
                 "config": "''",
                 "params": [],
                 "version": "1.0.0",
@@ -84,23 +84,23 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "a256f362-1022-46fd-845c-9cb30e48211e",
+              "uuid": "790919d3-cae4-4bd0-af29-f44c6c5a5e92",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get WHOIS History Search",
-              "sourceStep": "/api/3/workflow_steps/c6a8ddf1-50f7-4e6c-bdb2-55569fd70010",
-              "targetStep": "/api/3/workflow_steps/9fa6e400-b7aa-469d-aa7a-c2f1bb2fc954"
+              "sourceStep": "/api/3/workflow_steps/322cd5e6-cbcc-4d99-86bb-6f4c8931398b",
+              "targetStep": "/api/3/workflow_steps/d72cfe1d-f5ef-41f3-98b2-b831365c4294"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "6a30525b-7bd5-404d-a2c2-6ee29a6a0e87",
-          "collection": "/api/3/workflow_collections/0f21101d-526c-4d03-b6bf-24d9a9dbb4b6",
+          "uuid": "6473ffcf-9e68-4d43-942b-08348a5645bc",
+          "collection": "/api/3/workflow_collections/76ee7c0e-d67f-450d-9701-958fb6a2c9ab",
           "triggerLimit": null,
           "description": "It provides the registration details, also known as the WHOIS record data, of a domain name, an IP address, or an email address",
           "name": "Get WHOIS Search",
-          "tag": "#Whois XML API",
+          "tag": "#WhoisXMLAPI",
           "recordTags": [
             "Whois",
             "whois-xml-api"
@@ -110,17 +110,17 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/a115b8dc-b413-4d79-9b45-85ba34045866",
+          "triggerStep": "/api/3/workflow_steps/d6a1d558-447a-495f-b2eb-fbf3afc78d12",
           "steps": [
             {
-              "uuid": "a115b8dc-b413-4d79-9b45-85ba34045866",
+              "uuid": "d6a1d558-447a-495f-b2eb-fbf3afc78d12",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "1b347eb0-19db-4605-81b6-26382eaaecbe",
-                "title": "Whois XML API: Get WHOIS Search",
+                "route": "9276d6a3-2a97-4fe9-a8b1-4f30b36b5387",
+                "title": "WhoisXMLAPI: Get WHOIS Search",
                 "resources": [
                   "alerts"
                 ],
@@ -139,13 +139,13 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "9be63db3-7310-4e77-9e93-fd507e968833",
+              "uuid": "9e2daa82-fa36-42eb-9515-e7a82068ff2b",
               "@type": "WorkflowStep",
               "name": "Get WHOIS Search",
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Whois XML API",
+                "name": "WhoisXMLAPI",
                 "config": "''",
                 "params": {
                   "preferFresh": false,
@@ -170,23 +170,23 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "44ecb628-b56a-4b40-9919-84e9243c060f",
+              "uuid": "402dec80-998b-44ba-9425-bf03bae1876a",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get WHOIS Search",
-              "sourceStep": "/api/3/workflow_steps/a115b8dc-b413-4d79-9b45-85ba34045866",
-              "targetStep": "/api/3/workflow_steps/9be63db3-7310-4e77-9e93-fd507e968833"
+              "sourceStep": "/api/3/workflow_steps/d6a1d558-447a-495f-b2eb-fbf3afc78d12",
+              "targetStep": "/api/3/workflow_steps/9e2daa82-fa36-42eb-9515-e7a82068ff2b"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "86be757a-a8ce-481e-9252-d11723fb1a6a",
-          "collection": "/api/3/workflow_collections/0f21101d-526c-4d03-b6bf-24d9a9dbb4b6",
+          "uuid": "8f374972-79e7-4e16-a3df-04bdbdc24280",
+          "collection": "/api/3/workflow_collections/76ee7c0e-d67f-450d-9701-958fb6a2c9ab",
           "triggerLimit": null,
           "description": "Reverse WHOIS is the process by which users can find all domains containing specified search terms such as a registrant's name, email address, or phone number in their WHOIS records",
           "name": "Get Reverse WHOIS Search",
-          "tag": "#Whois XML API",
+          "tag": "#WhoisXMLAPI",
           "recordTags": [
             "Whois",
             "whois-xml-api"
@@ -196,17 +196,17 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/f9786145-87b0-4df8-8d16-246f612754f9",
+          "triggerStep": "/api/3/workflow_steps/055e1d9d-0f2f-491b-ad69-dec4873bb937",
           "steps": [
             {
-              "uuid": "f9786145-87b0-4df8-8d16-246f612754f9",
+              "uuid": "055e1d9d-0f2f-491b-ad69-dec4873bb937",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "e8e2e7af-e0fc-469e-a7fb-5866f615a7aa",
-                "title": "Whois XML API: Get Reverse WHOIS Search",
+                "route": "e2de52cc-c15c-4747-a8d4-1ce3bab99c7c",
+                "title": "WhoisXMLAPI: Get Reverse WHOIS Search",
                 "resources": [
                   "alerts"
                 ],
@@ -225,13 +225,13 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "3be0729f-aede-4c7e-9ba1-0effc67779b9",
+              "uuid": "f31aa4cc-1129-433f-a731-21ebfe57cd6d",
               "@type": "WorkflowStep",
               "name": "Get Reverse WHOIS Search",
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Whois XML API",
+                "name": "WhoisXMLAPI",
                 "config": "''",
                 "params": {
                   "include_audit_dates": false,
@@ -254,23 +254,23 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "f0cc0242-4712-457a-9949-382d0fae6d2d",
+              "uuid": "ab0abb44-3319-461c-9270-20dbe9955c06",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Reverse WHOIS Search",
-              "sourceStep": "/api/3/workflow_steps/f9786145-87b0-4df8-8d16-246f612754f9",
-              "targetStep": "/api/3/workflow_steps/3be0729f-aede-4c7e-9ba1-0effc67779b9"
+              "sourceStep": "/api/3/workflow_steps/055e1d9d-0f2f-491b-ad69-dec4873bb937",
+              "targetStep": "/api/3/workflow_steps/f31aa4cc-1129-433f-a731-21ebfe57cd6d"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "c6ff5c17-dc1c-419c-986d-c773854c0931",
-          "collection": "/api/3/workflow_collections/0f21101d-526c-4d03-b6bf-24d9a9dbb4b6",
+          "uuid": "6420e22a-31c1-4575-b043-7b0692675889",
+          "collection": "/api/3/workflow_collections/76ee7c0e-d67f-450d-9701-958fb6a2c9ab",
           "triggerLimit": null,
           "description": "Retrieves DNS Lookup for a specified domain name from WhoisXMLAPI. A DNS lookup provides a domain\u2019s corresponding IP address from its 'A' record as well as the domain\u2019s mail server (MX record), nameserver (NS record), SPF (TXT record), and more records. ",
           "name": "Get DNS Lookup",
-          "tag": "#Whois XML API",
+          "tag": "#WhoisXMLAPI",
           "recordTags": [
             "Whois",
             "whois-xml-api"
@@ -280,17 +280,17 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/a75600d7-9db7-424c-aad6-97f83a233e50",
+          "triggerStep": "/api/3/workflow_steps/aee318df-0c6e-4593-8ce2-ca19b32d3f60",
           "steps": [
             {
-              "uuid": "a75600d7-9db7-424c-aad6-97f83a233e50",
+              "uuid": "aee318df-0c6e-4593-8ce2-ca19b32d3f60",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "fde6ed13-1634-47dc-8dd5-a4076ff01ebb",
-                "title": "Whois XML API: Get DNS Lookup",
+                "route": "60e1e6b3-02a6-4127-a9e4-ebf778ecfa2a",
+                "title": "WhoisXMLAPI: Get DNS Lookup",
                 "resources": [
                   "alerts"
                 ],
@@ -309,13 +309,13 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "06d92fa4-13cd-4397-897c-7dca89173352",
+              "uuid": "cfa080bb-67c2-40e0-8596-5940f61a8328",
               "@type": "WorkflowStep",
               "name": "Get DNS Lookup",
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Whois XML API",
+                "name": "WhoisXMLAPI",
                 "config": "''",
                 "params": {
                   "type": "_all"
@@ -336,23 +336,23 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "0a639c11-af45-400a-8d00-e9c3e6024f78",
+              "uuid": "b1b6619b-9b62-4643-b276-4e960046cf85",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get DNS Lookup",
-              "sourceStep": "/api/3/workflow_steps/a75600d7-9db7-424c-aad6-97f83a233e50",
-              "targetStep": "/api/3/workflow_steps/06d92fa4-13cd-4397-897c-7dca89173352"
+              "sourceStep": "/api/3/workflow_steps/aee318df-0c6e-4593-8ce2-ca19b32d3f60",
+              "targetStep": "/api/3/workflow_steps/cfa080bb-67c2-40e0-8596-5940f61a8328"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "9aaff436-ea0a-4539-bc9c-0c5a367912f7",
-          "collection": "/api/3/workflow_collections/0f21101d-526c-4d03-b6bf-24d9a9dbb4b6",
+          "uuid": "8a5cdcea-24c8-4889-bbea-b132e5cfe8ec",
+          "collection": "/api/3/workflow_collections/76ee7c0e-d67f-450d-9701-958fb6a2c9ab",
           "triggerLimit": null,
           "description": "It lists all domains that have resolved to a given IP address, mail server, or nameserver at one point in time on the Domain Name System (DNS)",
           "name": "Get Reverse DNS Search",
-          "tag": "#Whois XML API",
+          "tag": "#WhoisXMLAPI",
           "recordTags": [
             "Whois",
             "whois-xml-api"
@@ -362,17 +362,17 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/b3b7b1f5-782b-4319-8629-d83e2a2ebe88",
+          "triggerStep": "/api/3/workflow_steps/41b49974-123d-4519-a97f-e67baed5ce34",
           "steps": [
             {
-              "uuid": "b3b7b1f5-782b-4319-8629-d83e2a2ebe88",
+              "uuid": "41b49974-123d-4519-a97f-e67baed5ce34",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "777b26c2-e113-4a8a-a156-b220f224f912",
-                "title": "Whois XML API: Get Reverse DNS Search",
+                "route": "c95ea0a9-29f2-41fe-a029-7602426a6cba",
+                "title": "WhoisXMLAPI: Get Reverse DNS Search",
                 "resources": [
                   "alerts"
                 ],
@@ -391,13 +391,13 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "daf73538-4f86-4edf-a95c-b8afec1682b5",
+              "uuid": "f8a06f3d-60ba-4157-aa7b-1b79e7e78b11",
               "@type": "WorkflowStep",
               "name": "Get Reverse DNS Search",
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Whois XML API",
+                "name": "WhoisXMLAPI",
                 "config": "''",
                 "params": {
                   "from": false
@@ -418,23 +418,23 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "9b376284-f2a8-475d-9341-b7d74d6cccb0",
+              "uuid": "b2c56c96-65e3-4f4c-8757-4287ad88f321",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Reverse DNS Search",
-              "sourceStep": "/api/3/workflow_steps/b3b7b1f5-782b-4319-8629-d83e2a2ebe88",
-              "targetStep": "/api/3/workflow_steps/daf73538-4f86-4edf-a95c-b8afec1682b5"
+              "sourceStep": "/api/3/workflow_steps/41b49974-123d-4519-a97f-e67baed5ce34",
+              "targetStep": "/api/3/workflow_steps/f8a06f3d-60ba-4157-aa7b-1b79e7e78b11"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "d5b8dff4-8eb3-46b3-aec6-609de43041a6",
-          "collection": "/api/3/workflow_collections/0f21101d-526c-4d03-b6bf-24d9a9dbb4b6",
+          "uuid": "df46d845-516d-4dca-8418-cca640a37373",
+          "collection": "/api/3/workflow_collections/76ee7c0e-d67f-450d-9701-958fb6a2c9ab",
           "triggerLimit": null,
           "description": "Domains & Subdomains Discovery Service allows you to identify all domains and/or subdomains connected by hostname terms",
-          "name": "Domain/Subdoamin Discovery",
-          "tag": "#Whois XML API",
+          "name": "Domain/Subdomain Discovery",
+          "tag": "#WhoisXMLAPI",
           "recordTags": [
             "Whois",
             "whois-xml-api"
@@ -444,17 +444,17 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/dfd2b579-e4e1-48ef-8dcb-c3b3b3d88e7d",
+          "triggerStep": "/api/3/workflow_steps/cc2a15e3-ef64-43b6-80dc-d28347f5fbd1",
           "steps": [
             {
-              "uuid": "dfd2b579-e4e1-48ef-8dcb-c3b3b3d88e7d",
+              "uuid": "cc2a15e3-ef64-43b6-80dc-d28347f5fbd1",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "e1d83b3c-bd65-4503-9655-c27fe6f1bbbf",
-                "title": "Whois XML API: Domain/Subdoamin Discovery",
+                "route": "9293a108-285f-4aad-b6b5-bede6f71d881",
+                "title": "WhoisXMLAPI: Domain/Subdomain Discovery",
                 "resources": [
                   "alerts"
                 ],
@@ -473,19 +473,19 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "87eb8122-5be8-41e6-b1d1-8e927e57032c",
+              "uuid": "6fa86659-63eb-47ee-8235-8479fd350474",
               "@type": "WorkflowStep",
-              "name": "Domain/Subdoamin Discovery",
+              "name": "Domain/Subdomain Discovery",
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Whois XML API",
+                "name": "WhoisXMLAPI",
                 "config": "''",
                 "params": [],
                 "version": "1.0.0",
                 "connector": "whois-xml-api",
-                "operation": "domain_subdoamin_discovery",
-                "operationTitle": "Domain/Subdoamin Discovery",
+                "operation": "domain_subdomain_discovery",
+                "operationTitle": "Domain/Subdomain Discovery",
                 "step_variables": {
                   "output_data": "{{vars.result}}"
                 }
@@ -498,23 +498,23 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "ec904e7a-4945-4975-89cd-5a50e057164f",
+              "uuid": "91e4b6f9-ff16-4239-911c-a6742a5038db",
               "label": null,
               "isExecuted": false,
-              "name": "Start-> Domain/Subdoamin Discovery",
-              "sourceStep": "/api/3/workflow_steps/dfd2b579-e4e1-48ef-8dcb-c3b3b3d88e7d",
-              "targetStep": "/api/3/workflow_steps/87eb8122-5be8-41e6-b1d1-8e927e57032c"
+              "name": "Start-> Domain/Subdomain Discovery",
+              "sourceStep": "/api/3/workflow_steps/cc2a15e3-ef64-43b6-80dc-d28347f5fbd1",
+              "targetStep": "/api/3/workflow_steps/6fa86659-63eb-47ee-8235-8479fd350474"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "f10ae6dd-2a52-40f2-865d-298f9fb1830a",
-          "collection": "/api/3/workflow_collections/0f21101d-526c-4d03-b6bf-24d9a9dbb4b6",
+          "uuid": "323b8cd3-5bd3-41f1-b59a-4688258fff31",
+          "collection": "/api/3/workflow_collections/76ee7c0e-d67f-450d-9701-958fb6a2c9ab",
           "triggerLimit": null,
           "description": "Automatic to track all new and just expired domain name registrations. You can monitor exact matches or typo variants to protect your brand reputation, detect trademark infringements, monitor competitors, and more",
           "name": "Brand Monitor",
-          "tag": "#Whois XML API",
+          "tag": "#WhoisXMLAPI",
           "recordTags": [
             "Whois",
             "whois-xml-api"
@@ -524,17 +524,17 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/e5be0235-cdc2-4ad4-90cd-42e50ee3f9b3",
+          "triggerStep": "/api/3/workflow_steps/c40583f8-930a-4ad5-b128-2bbb07ca68f9",
           "steps": [
             {
-              "uuid": "e5be0235-cdc2-4ad4-90cd-42e50ee3f9b3",
+              "uuid": "c40583f8-930a-4ad5-b128-2bbb07ca68f9",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "f693d9b0-59b1-4857-85ec-bf729eb9bcc4",
-                "title": "Whois XML API: Brand Monitor",
+                "route": "a26da44c-fb96-47b5-bc8b-0f98d5e7801b",
+                "title": "WhoisXMLAPI: Brand Monitor",
                 "resources": [
                   "alerts"
                 ],
@@ -553,13 +553,13 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "1619cbba-54ea-4e0f-a522-a6faa84b8659",
+              "uuid": "c66f3994-d235-4ea5-85e4-489bbe58c057",
               "@type": "WorkflowStep",
               "name": "Brand Monitor",
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Whois XML API",
+                "name": "WhoisXMLAPI",
                 "config": "''",
                 "params": {
                   "mode": "Preview",
@@ -581,23 +581,23 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "36ce8230-93b8-4f83-9c63-1c9b5f51aed0",
+              "uuid": "e92a6867-4b09-4111-ab3e-b8204753dc0b",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Brand Monitor",
-              "sourceStep": "/api/3/workflow_steps/e5be0235-cdc2-4ad4-90cd-42e50ee3f9b3",
-              "targetStep": "/api/3/workflow_steps/1619cbba-54ea-4e0f-a522-a6faa84b8659"
+              "sourceStep": "/api/3/workflow_steps/c40583f8-930a-4ad5-b128-2bbb07ca68f9",
+              "targetStep": "/api/3/workflow_steps/c66f3994-d235-4ea5-85e4-489bbe58c057"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "d2535ff4-237f-4a33-bc66-44cdb5babe1a",
-          "collection": "/api/3/workflow_collections/0f21101d-526c-4d03-b6bf-24d9a9dbb4b6",
+          "uuid": "be958726-69a7-438b-8994-dd2ba965849e",
+          "collection": "/api/3/workflow_collections/76ee7c0e-d67f-450d-9701-958fb6a2c9ab",
           "triggerLimit": null,
           "description": "Obtain a domain name\u2019s Secure Sockets Layer (SSL) certificate and trace its complete SSL certificate chain to reveal potential inconsistencies and misconfigurations that may translate to exploitable vulnerabilities. A single SSL Certificate Chain API query provides details that can ease your security enrichment efforts, allowing you to know which domains are trustworthy and which are not",
           "name": "Get SSL Certificates",
-          "tag": "#Whois XML API",
+          "tag": "#WhoisXMLAPI",
           "recordTags": [
             "Whois",
             "whois-xml-api"
@@ -607,17 +607,17 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/f97f12dc-6e17-4ef0-8a45-74ab3c1ce8d6",
+          "triggerStep": "/api/3/workflow_steps/331f3cd2-14c8-427e-8b5a-7e3a2ee23b15",
           "steps": [
             {
-              "uuid": "f97f12dc-6e17-4ef0-8a45-74ab3c1ce8d6",
+              "uuid": "331f3cd2-14c8-427e-8b5a-7e3a2ee23b15",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "7cec8599-ee5e-4663-8077-a000b6dfdea6",
-                "title": "Whois XML API: Get SSL Certificates",
+                "route": "d19447d3-83b8-40a7-a0dc-b8679202709b",
+                "title": "WhoisXMLAPI: Get SSL Certificates",
                 "resources": [
                   "alerts"
                 ],
@@ -636,13 +636,13 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "e72385ef-69ac-413c-bcb7-91839d3e062f",
+              "uuid": "f2ee1dd6-a615-4d60-bec1-67b58bfea5cf",
               "@type": "WorkflowStep",
               "name": "Get SSL Certificates",
               "description": null,
               "status": null,
               "arguments": {
-                "name": "Whois XML API",
+                "name": "WhoisXMLAPI",
                 "config": "''",
                 "params": {
                   "withChain": false,
@@ -664,12 +664,12 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "15d55fe6-940b-4976-8639-cdd5048257fc",
+              "uuid": "1c061172-935c-4a3c-a433-e12c6ab33e11",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get SSL Certificates",
-              "sourceStep": "/api/3/workflow_steps/f97f12dc-6e17-4ef0-8a45-74ab3c1ce8d6",
-              "targetStep": "/api/3/workflow_steps/e72385ef-69ac-413c-bcb7-91839d3e062f"
+              "sourceStep": "/api/3/workflow_steps/331f3cd2-14c8-427e-8b5a-7e3a2ee23b15",
+              "targetStep": "/api/3/workflow_steps/f2ee1dd6-a615-4d60-bec1-67b58bfea5cf"
             }
           ]
         }

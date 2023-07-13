@@ -152,7 +152,7 @@ def reverse_whois_search(config, params):
         raise ConnectorError(str(err))
 
 
-def domain_subdoamin_discovery(config, params):
+def domain_subdomain_discovery(config, params):
     try:
         wxa = WhoisXMLAPI(config)
         include_domain = params.get('include_domain').split(',') if isinstance(params.get('include_domain'),
@@ -237,7 +237,7 @@ operations = {
     'whois_search': whois_search,
     'reverse_whois_search': reverse_whois_search,
     'reverse_dns_search': reverse_dns_search,
-    'domain_subdoamin_discovery': domain_subdoamin_discovery,
+    'domain_subdomain_discovery': domain_subdomain_discovery,
     'brand_monitor': brand_monitor,
     'dns_lookup': dns_lookup,
     'ssl_certificates': ssl_certificates
