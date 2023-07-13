@@ -1,8 +1,8 @@
 {
   "name": "whois-xml-api",
-  "label": "Whois XML API",
+  "label": "WhoisXMLAPI",
   "version": "1.0.0",
-  "description": "Whois XML API Provides comprehensive set of real-time and historic Whois, Domain name and DNS Data",
+  "description": "WhoisXMLAPI Provides comprehensive set of real-time and historic Whois, Domain name and DNS Data",
   "publisher": "Fortinet",
   "cs_approved": false,
   "cs_compatible": false,
@@ -607,8 +607,8 @@
           "visible": true,
           "type": "multiselect",
           "name": "type",
-          "tooltip": "Select Multiple Types to retrieve records ",
-          "description": "Select the lookup type based on which you want to retrieve records from WhoisXmlAPI.",
+          "tooltip": "Select the multiple DNS types to for the specified Domain name. All DNS records can be retrieved with DNS Type=_all",
+          "description": "Select the multiple DNS types to for the specified Domain name. All DNS records can be retrieved with DNS Type=_all",
           "value": "_all",
           "options": [
             "_all",
@@ -700,7 +700,7 @@
             "Name Server"
           ],
           "onchange": {
-            "IPv4 address": [
+            "IPv4 Address": [
               {
                 "title": "IPv4 Address",
                 "name": "ip",
@@ -715,7 +715,7 @@
             ],
             "Mail server": [
               {
-                "title": "Mail server",
+                "title": "Mail Server",
                 "name": "mx",
                 "visible": true,
                 "required": true,
@@ -728,7 +728,7 @@
             ],
             "Name server": [
               {
-                "title": "Name server",
+                "title": "Name Server",
                 "name": "ns",
                 "visible": true,
                 "required": true,
@@ -757,8 +757,8 @@
       ]
     },
     {
-      "operation": "domain_subdoamin_discovery",
-      "title": "Domain/Subdoamin Discovery",
+      "operation": "domain_subdomain_discovery",
+      "title": "Domain/Subdomain Discovery",
       "description": "Domains & Subdomains Discovery Service allows you to identify all domains and/or subdomains connected by hostname terms",
       "enabled": true,
       "category": "investigation",
