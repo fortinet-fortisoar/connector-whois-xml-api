@@ -3,9 +3,9 @@ True_False_Map = {
     "False": 0
 }
 Domain_Availability_Map = {
-    "0 - Available": 0,
-    "1 - Unavailable": 1,
-    "2- Undetermined": 2
+    "0 - No Check": 0,
+    "1 - Quick Check": 1,
+    "2- Thorough Check": 2
 }
 WHOISXML_WHOIS_HISTORY_SEARCH_ENDPOINT = 'https://whois-history.whoisxmlapi.com/api/v1'
 WHOISXML_WHOIS_SEARCH_ENDPOINT = 'https://www.whoisxmlapi.com/whoisserver/WhoisService'
